@@ -14,3 +14,19 @@ ul,ol{
     list-style: none;
 }
 
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    padding: 0 16px;
+}
+
+input{
+    &:focus{
+
+        outline: none;
+    }
+}
+
