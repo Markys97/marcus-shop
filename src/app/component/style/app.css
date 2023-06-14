@@ -24,4 +24,13 @@ a {
 
 input:focus {
   outline: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    padding: unset;
+    max-width: 1139px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=app.css.map */
