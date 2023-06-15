@@ -1,10 +1,9 @@
 #page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .page-body {
   flex-grow: 1;
-  min-height: 500px;
 }/*# sourceMappingURL=layerPage.css.map */

@@ -1,9 +1,7 @@
 import React from 'react'
 import './style/layerPage.css'
-import Header from '../../../widgets/components/Header/Header'
-import Footer from '../../../widgets/components/Footer/Footer'
-import { Link } from 'react-router-dom'
 import {Outlet} from 'react-router-dom'
+import {Header,Footer} from '../../../widgets/index'
 
  
 

@@ -2,10 +2,7 @@ import React from 'react'
 
 import './style/header.css'
 import { Link } from 'react-router-dom'
-import Button from '../../../shared/ui/Button/Button'
-import SearchInput from '../../../shared/ui/SearchInput/SearchInput'
-import Menu from '../../../shared/ui/Menu/Menu'
-import Burger from '../../../shared/ui/Burger/Burger'
+import {Button,Menu,Burger,SearchInput} from '../../../shared/index'
 
 
  
