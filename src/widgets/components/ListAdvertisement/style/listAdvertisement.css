@@ -1,0 +1,16 @@
+.item-advertisement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.item-advertisement img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .advertisement {
+    margin-top: 12px;
+  }
+}/*# sourceMappingURL=listAdvertisement.css.map */

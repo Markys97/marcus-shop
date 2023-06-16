@@ -1,21 +1,23 @@
 import React from 'react'
 import './style/home.css'
 import { Link } from 'react-router-dom'
+import {
+  ListCategorie,
+  ListPopularCategorie,
+  ListArticle,
+  ListAdvantage,
+  ListAdvertisement
+ } from '../../../widgets'
+
 
 function Home() {
   return (
     <div className='home-page' id='home-page'>
       <div className="home-page__container">
         <div className="home-page__content">
-          <div className="advertisement">
-            <div className="advertisement__content">
-              <div className="advertisement__item item-advertisement">
-                <img src="/images/utils/pub1.png" alt="advertisement picture" />
-              </div>
-              
-            </div>
-          </div>
-
+          {/* Advertisement component */}
+          <ListAdvertisement/>
+      
           <div className="home-page__link-wrapper wrapper">
             <Link to="" className='_link _link--red'>Рыбинск</Link>
           </div>
@@ -23,148 +25,11 @@ function Home() {
           <section className="home-page__section section-home-page">
             <div className="section-home-page__container wrapper">
               <h2 className="home-page__title-categories">Интернет-магазин детских товаров</h2>
-              <div className="categories categories--home">
-                <div className="categories__container">
-                  <div className="categories__content">
-                    <div className="categories__row">
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                      <div className="item-categorie">
-                        <div className="item-categorie__content">
-                          <div className="item-categorie__img">
-                            <img src="/images/products/Rectangle.png" alt="categorie" />
-                          </div>
-                          <div className="item-categorie__title">Коляски и автокресла</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* listCategotie component  */}
+              <ListCategorie/>
 
-              <div className="advantages">
-                <div className="advantages__content">
-                  <div className="advantages__row">
-                    <div className="item-advantages">
-                      <div className="item-advantages__content">
-                        <div className="item-advantages__icon">
-                          <img src="/images/icons/pin.png" alt="icon" />
-                        </div>
-                        <div className="item-advantages__title">
-                            Срок доставки
-                            от 5 рабочих дней
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item-advantages">
-                      <div className="item-advantages__content">
-                        <div className="item-advantages__icon">
-                          <img src="/images/icons/pin.png" alt="icon" />
-                        </div>
-                        <div className="item-advantages__title">
-                            Срок доставки
-                            от 5 рабочих дней
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item-advantages">
-                      <div className="item-advantages__content">
-                        <div className="item-advantages__icon">
-                          <img src="/images/icons/pin.png" alt="icon" />
-                        </div>
-                        <div className="item-advantages__title">
-                            Срок доставки
-                            от 5 рабочих дней
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item-advantages">
-                      <div className="item-advantages__content">
-                        <div className="item-advantages__icon">
-                          <img src="/images/icons/pin.png" alt="icon" />
-                        </div>
-                        <div className="item-advantages__title">
-                            Срок доставки
-                            от 5 рабочих дней
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item-advantages">
-                      <div className="item-advantages__content">
-                        <div className="item-advantages__icon">
-                          <img src="/images/icons/pin.png" alt="icon" />
-                        </div>
-                        <div className="item-advantages__title">
-                            Срок доставки
-                            от 5 рабочих дней
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* listAdvantage  */}
+             <ListAdvantage/>
             </div>
 
           </section>
@@ -173,6 +38,7 @@ function Home() {
             <div className="home-page-product__container wrapper">
               <div className="home-page-product__content">
                 <div className="home-page-product__title">Популярные товары</div>
+                {/* listProduct */}
                 <div className="list-product">
                   <div className="list-product__row">
                     <div className="product">
@@ -440,54 +306,23 @@ function Home() {
               </div>
             </div>
           </section>
+
+          <section className="home-popular-categorie">
+            <div className="home-popular-categorie__container wrapper">
+              <div className="home-popular-categorie__content">
+                <h2 className="home-popular-categorie__title">Популярные категории</h2>
+                {/* listPopularCategorie */}
+               <ListPopularCategorie/>
+              </div>
+            </div>
+          </section>
+
           <section className="home-page-blog">
             <div className="home-page-blog__container wrapper">
               <div className="home-page-blog__content">
                 <h2 className="home-page-blog__title">Новости</h2>
-                <div className="list-articles">
-                  <div className="list-article__row">
-                    <div className="article-preview">
-                      <div className="article-preview__content">
-                        <h4 className="article-preview__title">LookBook</h4>
-                        <div className="article-preview__place">Новый год</div>
-                        <div className="article-preview__date">2020</div>
-                      </div>
-                      <div className="article-preview__img">
-                        <img src="/images/blogs/b1.png" alt="article preview" />
-                      </div>
-                    </div>
-                    <div className="article-preview">
-                      <div className="article-preview__content">
-                        <h4 className="article-preview__title">LookBook</h4>
-                        <div className="article-preview__place">Новый год</div>
-                        <div className="article-preview__date">2020</div>
-                      </div>
-                      <div className="article-preview__img">
-                        <img src="/images/blogs/b1.png" alt="article preview" />
-                      </div>
-                    </div>
-                    <div className="article-preview">
-                      <div className="article-preview__content">
-                        <h4 className="article-preview__title">LookBook</h4>
-                        <div className="article-preview__place">Новый год</div>
-                        <div className="article-preview__date">2020</div>
-                      </div>
-                      <div className="article-preview__img">
-                        <img src="/images/blogs/b1.png" alt="article preview" />
-                      </div>
-                    </div>
-                    <div className="article-preview">
-                      <div className="article-preview__content">
-                        <h4 className="article-preview__title">LookBook</h4>
-                        <div className="article-preview__place">Новый год</div>
-                        <div className="article-preview__date">2020</div>
-                      </div>
-                      <div className="article-preview__img">
-                        <img src="/images/blogs/b1.png" alt="article preview" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {/* listArctile */}
+               <ListArticle/>
               </div>
             </div>
           </section>

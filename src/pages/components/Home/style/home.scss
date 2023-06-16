@@ -21,96 +21,13 @@
 }
 
 
-.item-advertisement{
-    
-    // border: 1px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    img{
-        max-width: 100%;
-        height: auto;
-    }
-    
-}
 
 
 
 
-.item-categorie{
-    border: 1px solid #CECCCC;
-    border-radius: 5px;
-    &__content{
-        padding: 8px 18px 15px;
-    }
-    &__img{
-        max-width: 121.68px;
-        height: 121.68px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        // border: 1px solid;
-        margin: 0 auto 7px;
-        img{
-            max-width: 100%;
-            height: auto;
-        }
-    }
-    &__title{
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
 
-        text-align: center;
-        color: #6F6F6E;        
-    }
-}
 
-.categories{
-    &__row{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 18px 17px;
-    }
-}
 
-.advantages{
-    margin-bottom: 29px;
-    &__row{
-        display: flex;
-        justify-content: space-between;
-        gap: 0 15px;
-    }
-}
-
-.item-advantages{
-    max-width: 210px;
-    &__content{
-        padding:  0 5px;
-    }
-    &__icon{
-        width: 118px;
-        height: 119px;
-        margin: 0 auto 18px;
-        img{
-            max-width: 100%;
-            height: auto;
-        }
-    }
-    &__title{
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 21px;
-        text-align: center;
-        color: #6DBC25;
-        
-    }
-}
 
 .section-home-page{
     margin-bottom: 19px;
@@ -326,58 +243,25 @@
     }
 }
 
-.list-article{
-    &__row{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-    }
-}
 
-.article-preview{
-    max-width: 323px;
-    border: 1px solid #CECCCC;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    &__content{
-        max-width: 200px;
-        width: 100%;
-        position: absolute;
-        left: 12px;
-        top: 7px;
-         z-index: 1;
-         *{
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 14px;
-            
-            color: #000000;
-         }
-    }
 
+.home-popular-categorie{
+
+    margin-bottom: 48px;
     &__title{
-        margin-bottom: 10px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #6F6F6E;
+        margin-bottom: 32px;
     }
-    &__place{
-        margin-bottom: 10px;
-    }
-  
-    &__img{ 
-       
-        width: 100%;
-        height: 150px;
-        display: flex;
-
-        img{
-           width: 100%;
-            height: auto;
-        }
-    }
+   
 }
+
+
+
 
 
 @media screen and (min-width:1200px) {
@@ -402,39 +286,8 @@
         margin-bottom: 57px;
     }
 
-    .categories{
-        &--home{
-            margin-bottom: 160px;
-        }
-        &__row{
-            grid-template-columns: repeat(5,1fr);
-            gap: 17px 24px;
-        }
-    }
-
-    .item-categorie{
-        &__content{
-            padding: 6px 22px 24px;
-        }
-        &__img{
-            max-width: 160.16px;
-            height: 160px;
-            margin: 0 auto 29px;
-            img{
-                max-width: 100%;
-                height: auto;
-            }
-        }
-        &__title{
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;       
-        }
-    }
-
-    .advertisement{
-        margin-top: 12px;
-    }
+   
+   
 
     .list-product{
         &__row{
@@ -549,20 +402,24 @@
     
     }
 
-    .list-article{
-        &__row{
-            display: grid;
-            flex-direction: unset;
-            grid-template-columns: repeat(4,1fr);
-            align-items: unset;
-            gap: 0 30px;
-        }
-    }
+   
 
     .home-page-blog{
         margin-bottom: 58px;
         
     }
+
+
+    .home-popular-categorie{
+
+        margin-bottom: 51px;
+        &__title{
+            color: #000000;
+        }
+       
+    }
+
+   
 
 
 }
