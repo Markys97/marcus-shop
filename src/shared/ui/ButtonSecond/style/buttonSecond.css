@@ -1,0 +1,28 @@
+.button-second {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 6px;
+  background: #6DBC25;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-second__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 1200px) {
+  .button-second {
+    padding: 7px 16px;
+  }
+  .button-second__text {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}/*# sourceMappingURL=buttonSecond.css.map */

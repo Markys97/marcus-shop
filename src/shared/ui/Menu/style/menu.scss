@@ -24,6 +24,8 @@
                     opacity: 1;
                     pointer-events: unset;
                     z-index: 1;
+                
+                  
                 }
             }
           
@@ -40,6 +42,8 @@
                 max-width: 134px;
                 width: 100%;
                 min-height: 38px;
+                display: flex;
+                align-items: center;
               
                 background: #FFFFFF;
                 &:nth-child(even){
@@ -54,6 +58,9 @@
                     line-height: 14px;
                     color: #02A2F6;
                     text-align: left;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     width: unset;
                 }

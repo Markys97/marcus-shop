@@ -6,4 +6,6 @@
 
 .page-body {
   flex-grow: 1;
+  position: relative;
+  z-index: 0;
 }/*# sourceMappingURL=layerPage.css.map */

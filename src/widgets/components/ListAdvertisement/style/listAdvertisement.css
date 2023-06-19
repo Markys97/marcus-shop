@@ -9,8 +9,21 @@
   height: auto;
 }
 
+.advertisement .swiper-button-prev, .advertisement .swiper-button-next {
+  display: none;
+}
+.advertisement .swiper-pagination-bullet {
+  display: none;
+}
+
 @media screen and (min-width: 1200px) {
   .advertisement {
     margin-top: 12px;
+  }
+  .advertisement .swiper-button-prev, .advertisement .swiper-button-next {
+    display: flex;
+  }
+  .advertisement .swiper-pagination-bullet {
+    display: inline-block;
   }
 }/*# sourceMappingURL=listAdvertisement.css.map */

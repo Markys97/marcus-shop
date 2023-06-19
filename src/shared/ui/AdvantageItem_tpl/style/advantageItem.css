@@ -1,0 +1,21 @@
+.item-advantages {
+  max-width: 210px;
+}
+.item-advantages__icon {
+  width: 118px;
+  height: 119px;
+  margin: 0 auto 18px;
+}
+.item-advantages__icon img {
+  max-width: 100%;
+  height: auto;
+}
+.item-advantages__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #6DBC25;
+}/*# sourceMappingURL=advantageItem.css.map */

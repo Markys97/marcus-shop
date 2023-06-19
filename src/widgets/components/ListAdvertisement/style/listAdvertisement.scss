@@ -11,11 +11,27 @@
     }
     
 }
+.advertisement{
+
+    .swiper-button-prev,.swiper-button-next{
+        display: none;
+    }
+    .swiper-pagination-bullet{
+        display: none;
+    }
+}
 
 
 
 @media screen and (min-width:1200px) {
     .advertisement{
         margin-top: 12px;
+        .swiper-button-prev,.swiper-button-next{
+            display: flex;
+        }
+        .swiper-pagination-bullet{
+            display: inline-block;
+        }
+       
     }
 }

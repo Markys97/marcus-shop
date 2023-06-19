@@ -36,6 +36,8 @@
     max-width: 134px;
     width: 100%;
     min-height: 38px;
+    display: flex;
+    align-items: center;
     background: #FFFFFF;
   }
   .menu__item .submenu li:nth-child(even) {
@@ -50,6 +52,9 @@
     line-height: 14px;
     color: #02A2F6;
     text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: unset;
   }
   .menu__item a {

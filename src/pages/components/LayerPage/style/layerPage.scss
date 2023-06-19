@@ -7,4 +7,6 @@
 .page-body{
     flex-grow: 1;
     // min-height: 500px;
+    position: relative;
+    z-index: 0;
 }

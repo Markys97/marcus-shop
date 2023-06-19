@@ -1,66 +1,21 @@
 import React from 'react'
 import './style/listAdvantages.css'
+import AdVantageItem_tpl from '../../../shared/ui/AdvantageItem_tpl/AdVantageItem_tpl'
+import { useAppSelector } from '../../../shared' 
 
 function ListAdvantage() {
+    const listAdvantage = useAppSelector( state => state.product.listAdvantage)
   return (
     <div className="advantages">
         <div className="advantages__content">
         <div className="advantages__row">
-            <div className="item-advantages">
-            <div className="item-advantages__content">
-                <div className="item-advantages__icon">
-                <img src="/images/icons/pin.png" alt="icon" />
-                </div>
-                <div className="item-advantages__title">
-                    Срок доставки
-                    от 5 рабочих дней
-                </div>
-            </div>
-            </div>
-            <div className="item-advantages">
-            <div className="item-advantages__content">
-                <div className="item-advantages__icon">
-                <img src="/images/icons/pin.png" alt="icon" />
-                </div>
-                <div className="item-advantages__title">
-                    Срок доставки
-                    от 5 рабочих дней
-                </div>
-            </div>
-            </div>
-            <div className="item-advantages">
-            <div className="item-advantages__content">
-                <div className="item-advantages__icon">
-                <img src="/images/icons/pin.png" alt="icon" />
-                </div>
-                <div className="item-advantages__title">
-                    Срок доставки
-                    от 5 рабочих дней
-                </div>
-            </div>
-            </div>
-            <div className="item-advantages">
-            <div className="item-advantages__content">
-                <div className="item-advantages__icon">
-                <img src="/images/icons/pin.png" alt="icon" />
-                </div>
-                <div className="item-advantages__title">
-                    Срок доставки
-                    от 5 рабочих дней
-                </div>
-            </div>
-            </div>
-            <div className="item-advantages">
-            <div className="item-advantages__content">
-                <div className="item-advantages__icon">
-                <img src="/images/icons/pin.png" alt="icon" />
-                </div>
-                <div className="item-advantages__title">
-                    Срок доставки
-                    от 5 рабочих дней
-                </div>
-            </div>
-            </div>
+           
+            {
+                listAdvantage.map( advantageItem => (
+                    <AdVantageItem_tpl key={advantageItem.id}  data={advantageItem}/>
+                ))
+            }
+           
         </div>
         </div>
     </div>

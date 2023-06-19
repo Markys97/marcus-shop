@@ -39,3 +39,21 @@ input{
     }
 }
 
+.swiper-button-prev,.swiper-button-next{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1.5px solid #FFFFFF;
+    &::after{
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+}
+
+.swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #C4C4C4;
+    background: transparent;
+}
+

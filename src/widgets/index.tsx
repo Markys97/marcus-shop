@@ -5,6 +5,7 @@ import ListPopularCategorie from "./product/components/ListPopularCategorie/List
 import ListArticle from "./article/components/ListArcticle/ListArticle";
 import ListAdvantage from "./components/ListAdvantages/ListAdvantage";
 import ListAdvertisement from "./components/ListAdvertisement/ListAdvertisement";
+import ListProduct from "./product/components/ListProduct/ListProduct";
 
 
 export {
@@ -14,5 +15,6 @@ export {
     ListPopularCategorie,
     ListArticle,
     ListAdvantage,
-    ListAdvertisement
+    ListAdvertisement,
+    ListProduct
 }
