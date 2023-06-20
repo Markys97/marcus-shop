@@ -1,33 +1,56 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './style/listepopularCategorie.css'
+import { categorieType } from '../../../../shared'
+import { useAppSelector } from '../../../../shared'
+
+interface itemPopularCategorie{
+  id:number,
+  categorieName:string,
+  subCategorie:Array<string>
+}
 
 function ListPopularCategorie() {
+  const listPopularCategorie = useAppSelector(state => state.product.listPopularCategorie)
+  const listCategorie =  useAppSelector(state => state.product.listCategorie)
+  const [idPopularCategorieActive, setIdPopularCategorieActive] = useState<number>(1)
+  const listIdPopularCategorie = listPopularCategorie.map(item => item.categorie)
+
+  console.log(listPopularCategorie)
+
+
+
+  
+
+  const changeActiveCategorie = (id:number):void =>{
+    console.log(id)
+  }
+ 
+ 
+
+
+
+   
+
   return (
     <div className="popular-categorie">
         <div className="popular-categorie__content">
         <div className="popular-categorie__head">
             <ul className="popular-categorie__list">
-            <li className="popular-categorie__title active">Коляски</li>
-            <li className="popular-categorie__title">Автокресла</li>
-            <li className="popular-categorie__title">Детская комната</li>
-            <li className="popular-categorie__title">Товары для малышей</li>
-            <li className="popular-categorie__title">Игрушки</li>
-            <li className="popular-categorie__title">Велосипеды</li>
-            <li className="popular-categorie__title">Школьные рюкзаки</li>
+              {/* {
+                listNamesPopularCategorie.map((popularCategorie)=> (
+                  <li onClick={()=> changeActiveCategorie(popularCategorie.id)} key={popularCategorie.id} className={`popular-categorie__title ${popularCategorie.id ===idPopularCategorieActive?' active':''}`}>{popularCategorie.name}</li>
+                ))
+              } */}
             </ul>
         </div>
-        <div className="popular-categorie__body">
-            <div className="popular-categorie__item">Прогулочные коляски</div>
-            <div className="popular-categorie__item">Коляска Baby Care</div>
-            <div className="popular-categorie__item">Прогулочная коляска Peg Perego</div>
-            <div className="popular-categorie__item">Трехколесные коляски</div>
-            <div className="popular-categorie__item">Немецкие коляски</div>
-            <div className="popular-categorie__item">Прогулочные коляски</div>
-            <div className="popular-categorie__item">Коляска Baby Care</div>
-            <div className="popular-categorie__item">Прогулочная коляска Peg Perego</div>
-            <div className="popular-categorie__item">Трехколесные коляски</div>
-            <div className="popular-categorie__item">Немецкие коляски</div>
-        </div>
+        {/* <div className="popular-categorie__body">
+           {
+            
+             listSubCategorieActive.map((subCategorie,index) =>(
+              <div key={index} className="popular-categorie__item">{subCategorie}</div>
+             ))
+           }
+        </div> */}
         </div>
     </div>
   )

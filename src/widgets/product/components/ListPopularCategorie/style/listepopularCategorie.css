@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   color: #1867B4;
+  cursor: pointer;
 }
 .popular-categorie__title.active {
   color: #FF5273;

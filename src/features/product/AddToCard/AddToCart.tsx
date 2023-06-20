@@ -6,7 +6,7 @@ interface addToCardType{
 }
 function AddToCart({idProduct}:addToCardType) {
   return (
-    <ButtonSecond text='купить' onclick= {() => alert('mama')}/>
+    <ButtonSecond idProduct={idProduct} text='купить' onclick= {(id) => alert('product '+id)}/>
   )
 }
 

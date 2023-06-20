@@ -39,6 +39,21 @@ export interface productType{
     inStock:boolean,
     isNew:boolean,
     isDiscounted:boolean
+    subCategorie:string
+}
+export interface popularCategorie{
+    id:number;
+    categorie:number;
+    subCategorie:Array<string>
+}
+
+export interface articleType{
+    id:number;
+    title:string;
+    createAt:string;
+    preview:string;
+    content:string;
+    place:string
 }
 
 

@@ -205,7 +205,7 @@
             justify-content: space-between;
             gap: 0 5px;
             &-left{
-                flex-shrink: 0;
+                flex-shrink: 1;
             }
         }
         &__price{

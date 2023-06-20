@@ -1,5 +1,11 @@
 import {createSlice} from '@reduxjs/toolkit'
-import {advertisementType,categorieType,advangateItemType,productType} from '../../index'
+import {
+    advertisementType,
+    categorieType,
+    advangateItemType,
+    productType,
+    popularCategorie
+} from '../../index'
 
 
 
@@ -8,7 +14,8 @@ interface initialStateType {
     listAdvertisement: Array<advertisementType>;
     listCategorie: Array<categorieType>;
     listAdvantage :Array<advangateItemType>;
-    listProduct: Array<productType>
+    listProduct: Array<productType>;
+    listPopularCategorie:Array<popularCategorie>
 
 }
 
@@ -116,36 +123,52 @@ const initialState:initialStateType = {
             isNew:true,
             isDiscounted:false,
             inStock:true,
+            subCategorie:'Прогулочные коляски'
         },
         {
             id:2,
             name:'Рюкзак RA-973-1 Grizzly, цвет голубой',
             img:'02.png',
-            categorie:'Коляски',
+            categorie:'Автокресла',
             price:3538,
             isNew:true,
             isDiscounted:false,
             inStock:true,
+            subCategorie:'Прогулочные коляски'
         },
         {
             id:3,
             name:'Рюкзак RA-973-1 Grizzly, цвет голубой',
             img:'03.png',
-            categorie:'Коляски',
+            categorie:'Детская комната',
             price:3538,
             isNew:false,
             isDiscounted:false,
             inStock:false,
+            subCategorie:'Прогулочные коляски'
         },
         {
             id:4,
             name:'Рюкзак RA-973-1 Grizzly, цвет голубой',
             img:'04.png',
-            categorie:'Коляски',
+            categorie:'Товары для малышей',
             price:3538,
             isNew:false,
             isDiscounted:true,
             inStock:true,
+            subCategorie:'Прогулочные коляски'
+        },
+    ],
+    listPopularCategorie:[
+        {
+            id:1,
+            categorie:1,
+            subCategorie:['Прогулочные коляски','Коляска Baby Care','Прогулочная коляска Peg Perego','Трехколесные коляски']
+        },
+        {
+            id:2,
+            categorie:3,
+            subCategorie:['Прогулочные коляски','Коляска Baby Care','Прогулочная коляска Peg Perego','Трехколесные коляски']
         },
     ]
 }

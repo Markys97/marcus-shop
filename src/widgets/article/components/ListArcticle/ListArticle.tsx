@@ -1,50 +1,16 @@
 import React from 'react'
 import './style/listArticle.css'
+import { useAppSelector } from '../../../../shared'
+import PreviewArticle from '../../../../entities/article/PreviewArticle/PreviewArticle'
 
 function ListArticle() {
+    const listArticle = useAppSelector(state => state.setting.listArticle)
   return (
     <div className="list-articles">
         <div className="list-article__row">
-        <div className="article-preview">
-            <div className="article-preview__content">
-            <h4 className="article-preview__title">LookBook</h4>
-            <div className="article-preview__place">Новый год</div>
-            <div className="article-preview__date">2020</div>
-            </div>
-            <div className="article-preview__img">
-            <img src="/images/blogs/b1.png" alt="article preview" />
-            </div>
-        </div>
-        <div className="article-preview">
-            <div className="article-preview__content">
-            <h4 className="article-preview__title">LookBook</h4>
-            <div className="article-preview__place">Новый год</div>
-            <div className="article-preview__date">2020</div>
-            </div>
-            <div className="article-preview__img">
-            <img src="/images/blogs/b1.png" alt="article preview" />
-            </div>
-        </div>
-        <div className="article-preview">
-            <div className="article-preview__content">
-            <h4 className="article-preview__title">LookBook</h4>
-            <div className="article-preview__place">Новый год</div>
-            <div className="article-preview__date">2020</div>
-            </div>
-            <div className="article-preview__img">
-            <img src="/images/blogs/b1.png" alt="article preview" />
-            </div>
-        </div>
-        <div className="article-preview">
-            <div className="article-preview__content">
-            <h4 className="article-preview__title">LookBook</h4>
-            <div className="article-preview__place">Новый год</div>
-            <div className="article-preview__date">2020</div>
-            </div>
-            <div className="article-preview__img">
-            <img src="/images/blogs/b1.png" alt="article preview" />
-            </div>
-        </div>
+            {
+                listArticle.map((article,index) => index<4 && <PreviewArticle key={article.id} data={article}/>)
+            }
         </div>
     </div>
   )

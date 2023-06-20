@@ -15,8 +15,6 @@ import {
 
 function Home() {
 
-
-
   return (
     <div className='home-page' id='home-page'>
       <div className="home-page__container">

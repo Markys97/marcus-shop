@@ -20,6 +20,7 @@
         display: flex;
         align-items: center;
         color: #1867B4;
+        cursor: pointer;
         &.active{
             color: #FF5273;
             text-decoration: underline;

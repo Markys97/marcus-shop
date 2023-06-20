@@ -4,11 +4,12 @@ import { type } from 'os'
 
 interface buttonSecondType {
     text:string,
-    onclick: () => void
+    onclick: (id:number) => void,
+    idProduct:number
 }
-function ButtonSecond({text,onclick}:buttonSecondType) {
+function ButtonSecond({text,onclick,idProduct}:buttonSecondType) {
   return (
-    <button onClick={onclick} className="button-second">
+    <button onClick={()=>onclick(idProduct)} className="button-second">
         <div className="button-second__text">{text}</div>
     </button>
   )
