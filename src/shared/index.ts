@@ -41,7 +41,7 @@ export interface productType{
     isDiscounted:boolean
     subCategorie:string
 }
-export interface popularCategorie{
+export interface popularCategorieType{
     id:number;
     categorie:number;
     subCategorie:Array<string>

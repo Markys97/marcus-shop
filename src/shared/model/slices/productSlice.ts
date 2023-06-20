@@ -4,7 +4,7 @@ import {
     categorieType,
     advangateItemType,
     productType,
-    popularCategorie
+    popularCategorieType
 } from '../../index'
 
 
@@ -15,7 +15,7 @@ interface initialStateType {
     listCategorie: Array<categorieType>;
     listAdvantage :Array<advangateItemType>;
     listProduct: Array<productType>;
-    listPopularCategorie:Array<popularCategorie>
+    listPopularCategorie:Array<popularCategorieType>
 
 }
 
@@ -168,7 +168,7 @@ const initialState:initialStateType = {
         {
             id:2,
             categorie:3,
-            subCategorie:['Прогулочные коляски','Коляска Baby Care','Прогулочная коляска Peg Perego','Трехколесные коляски']
+            subCategorie:['Прогулочные коляски','Коляска Baby Care','Прогулочная коляска Peg Perego','Трехколесные коляски','Прогулочные коляски','Коляска Baby Care','Прогулочная коляска Peg Perego','Трехколесные коляски']
         },
     ]
 }
