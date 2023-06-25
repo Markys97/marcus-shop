@@ -3,9 +3,13 @@
   justify-content: center;
   align-items: center;
   padding: 5px 6px;
-  background: #6DBC25;
+  background: #02A2F6;
   border-radius: 5px;
   cursor: pointer;
+  transform: all 300ms;
+}
+.button-second--active {
+  background: #6DBC25;
 }
 .button-second__text {
   font-family: "Roboto";
@@ -22,7 +26,7 @@
     padding: 7px 16px;
   }
   .button-second__text {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 21px;
   }
 }/*# sourceMappingURL=buttonSecond.css.map */

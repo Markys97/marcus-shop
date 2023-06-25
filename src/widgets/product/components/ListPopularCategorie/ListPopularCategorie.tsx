@@ -42,12 +42,6 @@ function ListPopularCategorie() {
      const popularCategorieItems = createItemPopularCategorie(listPopularCategorie,listCategorie)
      const popularCategorieItemActive = popularCategorieItems.filter(item => item.id ===idPopularCategorieActive)[0]
 
-     console.log(popularCategorieItemActive)
-
-
-
-  
-
   const changeActiveCategorie = (id:number):void =>{
     setIdPopularCategorieActive(id)
   }

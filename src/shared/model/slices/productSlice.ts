@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import {createSlice,PayloadAction} from '@reduxjs/toolkit'
 import {
     advertisementType,
     categorieType,
@@ -6,6 +6,7 @@ import {
     productType,
     popularCategorieType
 } from '../../index'
+import { stat } from 'fs';
 
 
 
@@ -15,7 +16,9 @@ interface initialStateType {
     listCategorie: Array<categorieType>;
     listAdvantage :Array<advangateItemType>;
     listProduct: Array<productType>;
-    listPopularCategorie:Array<popularCategorieType>
+    listPopularCategorie:Array<popularCategorieType>;
+    cart:Array<number>;
+    liked:Array<number>;
 
 }
 
@@ -170,13 +173,39 @@ const initialState:initialStateType = {
             categorie:3,
             subCategorie:['Прогулочные коляски','Коляска Baby Care','Прогулочная коляска Peg Perego','Трехколесные коляски','Прогулочные коляски','Коляска Baby Care','Прогулочная коляска Peg Perego','Трехколесные коляски']
         },
-    ]
+    ],
+    cart:[],
+    liked:[]
 }
+
+
 export const productSlice = createSlice({
     name:'product',
     initialState,
     reducers:{
+        setProductToCart:(state,action:PayloadAction<number>) =>{
+            let idProduct = action.payload;
+            if(state.cart.includes(idProduct)){
+                return state
+            }
 
+            return state = {...state,cart:[...state.cart,idProduct]}
+        },
+        setLikeProduct:(state,action:PayloadAction<number>) => {
+            let idProduct = action.payload
+            if(state.liked.includes(idProduct)){
+                return state
+            }
+            return state ={...state,liked:[...state.liked,idProduct]}
+        },
+        removeLikeProduct:(state,action:PayloadAction<number>) =>{
+            let idProduct= action.payload
+            let newLiked = state.liked.filter(id => id !== idProduct)
+            state.liked = newLiked
+            return state
+        }
     }
 })
+
+export const {setProductToCart,setLikeProduct,removeLikeProduct} = productSlice.actions 
 
