@@ -1,6 +1,9 @@
 import {useEffect} from 'react'
 import './style/home.css'
 import { Link } from 'react-router-dom'
+import { Modal } from '../../../shared'
+import { useAppSelector } from '../../../shared'
+import ProductAddingToCart from '../../../entities/cart/ProductAddingToCart/ProductAddingToCart'
 import {
   ListCategorie,
   ListPopularCategorie,
@@ -14,6 +17,7 @@ import {
 
 
 function Home() {
+  const isOpenModal = useAppSelector(state => state.setting.isOpenModal)
 
   return (
     <div className='home-page' id='home-page'>
@@ -68,6 +72,11 @@ function Home() {
 
         </div>
       </div>
+      { isOpenModal && (
+        <Modal>
+          <ProductAddingToCart/>
+        </Modal>
+      )}
     </div>
   )
 }

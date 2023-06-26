@@ -19,6 +19,7 @@ interface initialStateType {
     listPopularCategorie:Array<popularCategorieType>;
     cart:Array<number>;
     liked:Array<number>;
+    idCurrentProductAddingToCart:number|null
 
 }
 
@@ -175,7 +176,8 @@ const initialState:initialStateType = {
         },
     ],
     cart:[],
-    liked:[]
+    liked:[],
+    idCurrentProductAddingToCart:null
 }
 
 
@@ -203,9 +205,15 @@ export const productSlice = createSlice({
             let newLiked = state.liked.filter(id => id !== idProduct)
             state.liked = newLiked
             return state
+        },
+        setIdCurrentProductAddingToCart:(state,action:PayloadAction<number>)=>{
+            const idProduct = action.payload
+            state.idCurrentProductAddingToCart =idProduct
+            return state
         }
+        
     }
 })
 
-export const {setProductToCart,setLikeProduct,removeLikeProduct} = productSlice.actions 
+export const {setProductToCart,setLikeProduct,removeLikeProduct,setIdCurrentProductAddingToCart} = productSlice.actions 
 

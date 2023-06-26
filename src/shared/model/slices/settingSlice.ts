@@ -6,7 +6,8 @@ import { title } from 'process'
 
 interface initialStateType{
     menu:Array<menuType>,
-    listArticle: Array<articleType>
+    listArticle: Array<articleType>;
+    isOpenModal:boolean
 }
 
 const initialState:initialStateType ={
@@ -133,14 +134,19 @@ const initialState:initialStateType ={
             content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, magni .'
 
         },
-    ]
+    ],
+    isOpenModal:false
 }
 
 export const settingSlice = createSlice({
     initialState,
     name:'setting',
     reducers:{
+        OpenModal:(state)=> state={...state, isOpenModal:true},
+        closeModal:(state)=> state={...state, isOpenModal:false},
 
     },
 
 })
+
+export const {OpenModal,closeModal} = settingSlice.actions

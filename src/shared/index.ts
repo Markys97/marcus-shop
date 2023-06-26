@@ -5,6 +5,7 @@ import Burger from "./ui/Burger/Burger";
 import Menu from "./ui/Menu/Menu";
 import SearchInput from "./ui/SearchInput/SearchInput";
 import ButtonSecond from "./ui/ButtonSecond/ButtonSecond";
+import Modal from "./ui/Modal/Modal";
 
 export interface advertisementType {
     img:string
@@ -66,7 +67,8 @@ export {
     SearchInput,
     Menu,
     Burger,
-    ButtonSecond
+    ButtonSecond,
+    Modal
     
 
 }

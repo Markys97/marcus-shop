@@ -1,7 +1,9 @@
 import React from 'react'
 import {ButtonSecond} from '../../../shared/index'
 import { useAppDispatch,useAppSelector } from '../../../shared/index'
-import { setProductToCart } from '../../../shared/model/slices/productSlice'
+import { setProductToCart ,setIdCurrentProductAddingToCart} from '../../../shared/model/slices/productSlice'
+import { OpenModal } from '../../../shared/model/slices/settingSlice'
+import { stat } from 'fs'
 
 interface AddToCardType{
     idProduct:number
@@ -12,6 +14,7 @@ interface AddToCardType{
 
 function AddToCart({idProduct}:AddToCardType) {
   const cart:Array<number> = useAppSelector(state => state.product.cart)
+  const idCurrentProductAddingToCart = useAppSelector(state => state.product.idCurrentProductAddingToCart)
   const dispatch = useAppDispatch()
   const openModal = (id:number):void => alert('open cart '+ id)
 
@@ -29,7 +32,8 @@ function AddToCart({idProduct}:AddToCardType) {
     if(!isproductInCart(cart,idProduct)){
       addProductToCart(idProduct)
     }else{
-      openModal(idProduct)
+      dispatch(setIdCurrentProductAddingToCart(idProduct))
+      dispatch(OpenModal())
     }
   }
 

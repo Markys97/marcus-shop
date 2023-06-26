@@ -33,7 +33,6 @@
   color: #CECCCC;
 }
 .input__search-icon {
-  z-index: 1;
   cursor: pointer;
   width: 41px;
   height: 33px;
