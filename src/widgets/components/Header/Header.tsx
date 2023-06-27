@@ -2,13 +2,30 @@ import React from 'react'
 import './style/header.css'
 import { Link } from 'react-router-dom'
 import {Button,Menu,Burger,SearchInput} from '../../../shared/index'
-import { useAppSelector } from '../../../shared/index'
+import { useAppSelector,useAppDispatch } from '../../../shared/index'
+import { setModalContent ,OpenModal} from '../../../shared/model/slices/settingSlice'
 
 function Header() {
+    const {isOpenModal} = useAppSelector(state => state.setting.modal)
+    const dispatch = useAppDispatch()
     const cart = useAppSelector(state => state.product.cart);
     const listProductLiked = useAppSelector(state => state.product.liked);
     const totalCartProduct:number  = cart.length
     const totalLikedProduct:number = listProductLiked.length
+
+    const openModalFeedback = ():void => {
+
+        if (isOpenModal === true){
+            dispatch(setModalContent('feedback'))
+            return 
+        }
+        dispatch(setModalContent('feedback'))
+        dispatch(OpenModal())
+
+
+    }
+
+
   return (
     <header className='header'>
         <div className="header__container">
@@ -154,7 +171,7 @@ function Header() {
                     </div>
                     <div className="header-center__tel-number">+7 (4855) 20-45-50</div>
                     </Link>
-                <Button text="Обратный звонок" onClick={():void=>{}}/>
+                    <Button text="Обратный звонок" onClick={openModalFeedback}/>
                 </div>
                 </div>
 

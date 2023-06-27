@@ -2,7 +2,7 @@ import React from 'react'
 import {ButtonSecond} from '../../../shared/index'
 import { useAppDispatch,useAppSelector } from '../../../shared/index'
 import { setProductToCart ,setIdCurrentProductAddingToCart} from '../../../shared/model/slices/productSlice'
-import { OpenModal } from '../../../shared/model/slices/settingSlice'
+import { OpenModal, setModalContent } from '../../../shared/model/slices/settingSlice'
 import { stat } from 'fs'
 
 interface AddToCardType{
@@ -33,6 +33,7 @@ function AddToCart({idProduct}:AddToCardType) {
       addProductToCart(idProduct)
     }else{
       dispatch(setIdCurrentProductAddingToCart(idProduct))
+      dispatch(setModalContent('addingProductToCart'))
       dispatch(OpenModal())
     }
   }

@@ -1,5 +1,5 @@
-import {createSlice} from '@reduxjs/toolkit'
-import {menuType,articleType} from '../../index'
+import {createSlice,PayloadAction} from '@reduxjs/toolkit'
+import {menuType,articleType,ModalContentType} from '../../index'
 import { title } from 'process'
 
 
@@ -7,7 +7,10 @@ import { title } from 'process'
 interface initialStateType{
     menu:Array<menuType>,
     listArticle: Array<articleType>;
-    isOpenModal:boolean
+    modal:{
+        isOpenModal:boolean
+        modalContent:ModalContentType
+    }
 }
 
 const initialState:initialStateType ={
@@ -135,18 +138,26 @@ const initialState:initialStateType ={
 
         },
     ],
-    isOpenModal:false
+    modal:{
+        isOpenModal:false,
+       modalContent:null
+    }
 }
 
 export const settingSlice = createSlice({
     initialState,
     name:'setting',
     reducers:{
-        OpenModal:(state)=> state={...state, isOpenModal:true},
-        closeModal:(state)=> state={...state, isOpenModal:false},
+        OpenModal:(state)=> state={...state, modal:{...state.modal,isOpenModal:true}},
+        closeModal:(state)=> state={...state,  modal:{...state.modal,isOpenModal:false}},
+        setModalContent :(state,action:PayloadAction<ModalContentType>) =>{
+            let Idcontent = action.payload
+            state.modal.modalContent=Idcontent
+            return state
+        }
 
     },
 
 })
 
-export const {OpenModal,closeModal} = settingSlice.actions
+export const {OpenModal,closeModal,setModalContent} = settingSlice.actions

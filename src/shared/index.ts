@@ -6,6 +6,7 @@ import Menu from "./ui/Menu/Menu";
 import SearchInput from "./ui/SearchInput/SearchInput";
 import ButtonSecond from "./ui/ButtonSecond/ButtonSecond";
 import Modal from "./ui/Modal/Modal";
+import { type } from "os";
 
 export interface advertisementType {
     img:string
@@ -56,6 +57,8 @@ export interface articleType{
     content:string;
     place:string
 }
+
+export type ModalContentType = null|'addingProductToCart'|'feedback'
 
 
 

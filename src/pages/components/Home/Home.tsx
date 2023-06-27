@@ -17,7 +17,7 @@ import {
 
 
 function Home() {
-  const isOpenModal = useAppSelector(state => state.setting.isOpenModal)
+  const {isOpenModal,modalContent} = useAppSelector(state => state.setting.modal)
 
   return (
     <div className='home-page' id='home-page'>
@@ -74,7 +74,8 @@ function Home() {
       </div>
       { isOpenModal && (
         <Modal>
-          <ProductAddingToCart/>
+          {  modalContent=== "addingProductToCart" && <ProductAddingToCart/>}
+          {  modalContent=== "feedback" && <p>Hello world</p>}
         </Modal>
       )}
     </div>
